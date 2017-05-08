@@ -10,8 +10,8 @@ def push():
 		ip = get('https://api.ipify.org').text
 		print ('Updating:\n' + '- host: ' + '"' + subdomain+ '"\n'+ '- addr: ' + ip)
 
-		urllib.request.urlopen('http://104.131.201.115:5000/updatehost?subdomain=' + subdomain + '&ip=' + ip +
-	'&client_token=' + client_token)
+		urllib.request.urlopen('http://dynip.space/update?hostname=' + subdomain + '&myip=' + ip +
+	'&token=' + client_token)
 		print ('Successful\nSleep for 30 min')
 		time.sleep(1800)
 	except Exception as e:
